@@ -17,25 +17,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Sidebar menu wasn't possible to scroll - @PanMisza (#2627)
 - Confirmation popup 'Product has beed added to cart' is displayed only once - @JKrupinski (#2610)
 - Moved My Account options from Categories - @bartdominiak (#2612)
+- Fix displaying (and adding) reviews for configurable products - @afirlejczyk (#2660) 
+- Image switching fix - @pkarw (#2709)
+- Respect store code on order/PROCESS_QUEUE for shop store - @zulcom (#2727)
+- Unexpected `window.localStorage` use in user module actions - @zulcom (#2735)
+- Fix handling state of same address checkbox in the checkout - @lukeromanowicz (#2730)
 
 ### Changed / Improved
 - Improved ProductGalleryCarousel component to handle nonnumeric options id’s - @danieldomurad (#2586)
 - Number of displayed products is now visible on PLP on desktop - @awierzbiak (#2504)
 - Improved visibility of product SKU in wishlist  - @PanMisza (#2606)
 - Instant focus to search input field after click on search icon in navbar - @ca1zr (#2608)
+- Login flow from authorized pages after session expired, show the modal with new error message and redirect after login - @gdomiciano, @natalledm (#2674)
 - Added support for the newest node version - @gdomiciano (#2669)
 - Default storeId from `0` to `1` for multistore and cmsdata logic - @janmyszkier (#2590)
 - Used `$bus` plugin instead of EventBus import - @szafran89 (#2630)
 - BaseCheckbox now uses v-model. @click is not needed anymore - @haukebri (#2630)
 - Image selection supporting multiple configurable options - @mdesmet (#2599)
 - Product video - retrieve video id from 'video_id' field (if set) instead of 'id' - @afirlejczyk
+- Webpack config improvement - @yogeshsuhagiya (#2689)
+- BaseSelect input event - @ResuBaka (#2683)
 - Fixed static file handler to immediately return 404 status for missing files - @grimason (#2685)
 - Fixed maxAge Response Header for static files and Content-Type for Service Worker - @grimason (#2686)
+- Default log verbosity is changed to show only errors - @lromanowicz (#2717)
+- Logger refactor + now it takes `showErrorOnProduction` into account - @lromanowicz - (#2717)
+- Jest updated from 24.1 to 24.7 along with typings - @lromanowicz - (#2717)
+- Jest globals added to .eslint - @lromanowicz (#2717)
+- The default storeId is taken from the configurations - @nuovecode (#2718)
+- Multitab cart sync - @BartoszLiburski (#2547)
 
 ## [1.9.0] - UNRELEASED
 
 ### Fixed
-- 
+- ESlint throwing errors about undefined jest globals in tests - @lukeromanowicz (#2702)
+- Fixed changing the country when entering shipping address in checkout not updating shipping costs - @revlis-x (#2691)
 
 ## [1.9.0-rc.2] - 2019.04.10
 
@@ -68,6 +83,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Material Icons are loaded asynchronously - @JKrupinski, @filrak (#2060)
 - Update to babel 7 - @lukeromanowicz (#2554)
 
+## [1.8.5] - 2019.04.17
+
+### Fixed
+- Memory leaks on SSR with Vue.use - @patzick (#2745)
 
 ## [1.8.4] - 2019.03.26
 
